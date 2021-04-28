@@ -3,16 +3,19 @@ import {View, Text} from 'react-native';
 import styles from '../components/style';
 import {connect} from 'react-redux';
 import {Button} from '../components/Button';
+import {TEXT} from '../components/Strings';
 
 class ThankyouScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.name}>Welcome, {this.props.data.name}</Text>
+          <Text style={styles.name}>
+            {TEXT.nameText} {this.props.data.name}
+          </Text>
         </View>
         <View style={styles.thankyouBody}>
-          <Text style={styles.thankyouText}>Thank You</Text>
+          <Text style={styles.thankyouText}>{TEXT.thankyouText}</Text>
           <Button
             title="Go to Home"
             style={styles.button3}

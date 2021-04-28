@@ -1,8 +1,8 @@
 export const COLORS = {
-  backgroundColor: '#273746',
+  backgroundColor: 'black',
   inputTextColor: '#fff',
   buttonColor: '#5DADE2',
-  button2Color: '#DDDDDD',
+  button2Color: '#707B7C',
   swipeButtonColor: '#5DADE2',
-  textColor: '#1ABC9C',
+  textColor: '#F5B041',
 };

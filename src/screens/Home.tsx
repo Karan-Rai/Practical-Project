@@ -4,7 +4,7 @@ import styles from '../components/style';
 import {Button} from '../components/Button';
 import {saveData} from '../Redux/action';
 import {connect} from 'react-redux';
-import {Value} from 'react-native-reanimated';
+import {TEXT} from '../components/Strings';
 
 class Home extends React.Component {
   constructor(props: {} | Readonly<{}>) {
@@ -24,7 +24,7 @@ class Home extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.body}>
-          <Text style={styles.name}>Welcome to Home Screen</Text>
+          <Text style={styles.name}>{TEXT.welcomeText}</Text>
 
           <TextInput
             placeholder="Enter Your Name"
