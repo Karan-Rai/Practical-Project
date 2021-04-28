@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {View, Text} from 'react-native';
 import SwipeButton from 'rn-swipe-button';
-import styles from '../components/style';
-import {Button} from '../components/Button';
-import {COLORS} from '../components/Colors';
+import styles from './style';
+import {Button} from '../../components/Button';
+import {COLORS} from '../../components/Colors';
 import {connect} from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {TEXT} from '../components/Strings';
+import {TEXT} from '../../components/Strings';
 
 class ButtonScreen extends React.Component {
   myIcon = () => <Icon name="diamond" size={30} />;
@@ -21,10 +21,10 @@ class ButtonScreen extends React.Component {
         </View>
         <View style={styles.buttonBody}>
           <Text style={styles.name}>{TEXT.buttonText}</Text>
-          <Button title="Press Me" style={styles.button1} />
-          <Button title="Press Me" style={styles.button2} />
+          <Button title={TEXT.button} style={styles.button1} />
+          <Button title={TEXT.button} style={styles.button2} />
           <Button
-            title="Press Me"
+            title={TEXT.button}
             style={styles.button3}
             onPress={() => this.props.navigation.goBack()}
           />
@@ -38,7 +38,7 @@ class ButtonScreen extends React.Component {
               borderColor: '#fff',
             }}
             shouldResetAfterSuccess={true}
-            title="Slide to Continue"
+            title={TEXT.swipeText}
             titleColor="#5DADE2"
             thumbIconBackgroundColor={COLORS.buttonColor}
             thumbIconComponent={this.myIcon}

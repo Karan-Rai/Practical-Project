@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, TextInput} from 'react-native';
-import styles from '../components/style';
-import {Button} from '../components/Button';
-import {saveData} from '../Redux/action';
+import styles from './style';
+import {Button} from '../../components/Button';
+import {saveData} from '../../Redux/action';
 import {connect} from 'react-redux';
-import {TEXT} from '../components/Strings';
+import {TEXT} from '../../components/Strings';
 
 class Home extends React.Component {
   constructor(props: {} | Readonly<{}>) {
@@ -27,14 +27,14 @@ class Home extends React.Component {
           <Text style={styles.name}>{TEXT.welcomeText}</Text>
 
           <TextInput
-            placeholder="Enter Your Name"
+            placeholder={TEXT.textInput}
             style={styles.input}
             onChangeText={name => {
               this.setState({name: name}, () => {});
             }}
           />
           <Button
-            title="Submit"
+            title={TEXT.submitText}
             disabled={this.state.name == '' ? true : false}
             onPress={this.onSubmit}
             style={styles.submitButton}

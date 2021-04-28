@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import styles from '../components/style';
+import styles from './style';
 import {connect} from 'react-redux';
-import {Button} from '../components/Button';
-import {TEXT} from '../components/Strings';
+import {Button} from '../../components/Button';
+import {TEXT} from '../../components/Strings';
 
 class ThankyouScreen extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class ThankyouScreen extends React.Component {
         <View style={styles.thankyouBody}>
           <Text style={styles.thankyouText}>{TEXT.thankyouText}</Text>
           <Button
-            title="Go to Home"
+            title={TEXT.button2}
             style={styles.button3}
             onPress={() => this.props.navigation.navigate('Home')}
           />

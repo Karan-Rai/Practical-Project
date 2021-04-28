@@ -1,10 +1,12 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from '../screens/Home';
-import ButtonScreen from '../screens/ButtonScreen';
-import ThankyouScreen from '../screens/ThankyouScreen';
+import Home from '../screens/Home/index';
+import ButtonScreen from '../screens/ButtonScreen/index';
+import ThankyouScreen from '../screens/ThankyouScreen/index';
+
 const Stack = createStackNavigator();
+
 interface Routesprops {}
 export const Routes: React.FC<Routesprops> = ({}) => {
   return (
